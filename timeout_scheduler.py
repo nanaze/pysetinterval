@@ -8,8 +8,18 @@ def _YieldEventTimes(start, interval):
     current += interval
 
 class TimeoutScheduler(object):
+  """Utility class to call a callback once per interval."""
 
   def __init__(self, interval, callback):
+    """Create a timeout scheduler.
+
+    The callback will be called once per interval when Start()
+    is called.
+
+    interval: Time in seconds (can be float) indicating how
+      often callback should be run.
+    callback: The callback to call once per interval.
+    """
     self.interval = interval
     self.callback = callback
 
