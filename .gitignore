@@ -1,0 +1,6 @@
+# ignore emacs
+*~
+\#*\#
+
+# ignore pyc
+*.pyc
